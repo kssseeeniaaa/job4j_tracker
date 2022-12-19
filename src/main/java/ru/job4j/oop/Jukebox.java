@@ -4,11 +4,9 @@ public class Jukebox {
     public void music(int position) {
         if (position == 1) {
             System.out.println("Пусть бегут неуклюже");
-        }
-        if (position == 2) {
+        } else if (position == 2) {
             System.out.println("Спокойной ночи");
-        }
-        if (position != 1 && position != 2) {
+        } else {
             System.out.println("Песня не найдена");
         }
     }
