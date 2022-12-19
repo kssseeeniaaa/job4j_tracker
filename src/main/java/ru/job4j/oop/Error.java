@@ -26,10 +26,6 @@ public class Error {
         Error error2 = new Error(true, 13, "Обед");
         Error error3 = new Error(true, 17, "Ужин");
         err.printInfo();
-        error1.printInfo();
-        error2.printInfo();
         error3.printInfo();
-
-
     }
 }
