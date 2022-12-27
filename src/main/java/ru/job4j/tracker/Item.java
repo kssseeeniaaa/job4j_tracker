@@ -39,7 +39,7 @@ public class Item {
     public static void main(String[] args) {
         Item first = new Item();
         Item second = new Item("с параметром String");
-        Item third = new Item(15,"и c параметром String");
+        Item third = new Item(15, "и c параметром String");
         first.printInfo();
         second.printInfo();
         third.printInfo();
