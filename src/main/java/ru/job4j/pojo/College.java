@@ -6,6 +6,8 @@ public class College {
         student.setLastName("Korobeinikov");
         student.setNumberClass("IKT-412");
         student.setDate("1.09.2014");
-        System.out.println("Фамилия: " + student.getLastName() + ", группа: " + student.getNumberClass() + ", дата поступления: " + student.getDate());
+        System.out.println("Фамилия: " + student.getLastName()
+                + ", группа: " + student.getNumberClass() + ", дата поступления: "
+                + student.getDate());
     }
 }
