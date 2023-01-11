@@ -17,17 +17,15 @@ public class Library {
             System.out.println(rsl.getName() + " - " + rsl.getPage() + " page");
         }
         System.out.println();
-        for (int index = 0; index < lib.length; index++) {
-            if (index == 0) {
-                Book rsl = lib[0];
-                lib[0] = lib[3];
-                lib[3] = rsl;
-            }
-            Book rsl = lib[index];
+        Book rsl = lib[0];
+        lib[0] = lib[3];
+        lib[3] = rsl;
+        for (Book book : lib) {
+            rsl = book;
             System.out.println(rsl.getName() + " - " + rsl.getPage() + " page");
         }
         System.out.println();
-        for (Book rsl : lib) {
+        for (int index = 0; index < lib.length; index++) {
             if (Objects.equals(rsl.getName(), "Clean code")) {
                 System.out.println(rsl.getName() + " - " + rsl.getPage() + " page");
             }
