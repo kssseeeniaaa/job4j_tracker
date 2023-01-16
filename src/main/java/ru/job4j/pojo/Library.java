@@ -26,8 +26,8 @@ public class Library {
         }
         System.out.println();
         for (Book books : lib) {
-            if (Objects.equals(rsl.getName(), "Clean code")) {
-                System.out.println(rsl.getName() + " - " + rsl.getPage() + " page");
+            if (Objects.equals(books.getName(), "Clean code")) {
+                System.out.println(books.getName() + " - " + books.getPage() + " page");
             }
         }
     }
