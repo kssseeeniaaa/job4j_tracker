@@ -54,6 +54,6 @@ public class Tracker {
         }
         items[index] = item;
         item.setId(id);
-        return true;
+        return Objects.equals(item.getName(), items[index].getName());
     }
 }
