@@ -2,6 +2,7 @@ package ru.job4j.tracker;
 
 import java.util.Arrays;
 import java.util.Objects;
+
 public class Tracker {
     private final Item[] items = new Item[100];
     private int ids = 1;
@@ -48,11 +49,24 @@ public class Tracker {
 
     public boolean replace(int id, Item item) {
         int index = indexOf(id);
-        if (index == -1) {
-            return false;
+        boolean rsl = index != -1;
+        if (rsl) {
+            items[index] = item;
+            item.setId(id);
         }
-        items[index] = item;
-        item.setId(id);
-        return true;
+        return rsl;
+    }
+
+    public boolean delete(int id) {
+        int index = indexOf(id);
+        boolean rsl = index != -1;
+        if (rsl) {
+            items[index] = null;
+            System.arraycopy(items, index + 1,
+                    items, index, size - index - 1);
+            items[size - 1] = null;
+            size--;
+        }
+        return rsl;
     }
 }
